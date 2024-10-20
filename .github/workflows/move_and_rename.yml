@@ -32,11 +32,6 @@ jobs:
         working-directory: ./losers_only
         run: npm run build
 
-      # Export the Next.js application (creates the 'out' directory)
-      - name: Export Next.js
-        working-directory: ./losers_only
-        run: npm run export
-
       # Move 'out' directory from 'losers_only' to the root and rename it to 'docs'
       - name: Move and Rename 'out' to 'docs'
         run: |
