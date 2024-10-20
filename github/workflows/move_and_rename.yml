@@ -1,0 +1,61 @@
+name: Build and Export Next.js
+
+# Trigger the workflow on push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_export:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci  # Use npm ci for clean installs in CI
+
+      # Build the Next.js application
+      - name: Build Next.js
+        working-directory: ./losers_only
+        run: npm run build
+
+      # Export the Next.js application (creates the 'out' directory)
+      - name: Export Next.js
+        working-directory: ./losers_only
+        run: npm run export
+
+      # Move 'out' directory from 'losers_only' to the root and rename it to 'docs'
+      - name: Move and Rename 'out' to 'docs'
+        run: |
+          rm -rf docs                        # Remove existing 'docs' directory at root
+          mv losers_only/out ./docs           # Move 'out' from 'losers_only' to root and rename to 'docs'
+
+      # Add CNAME file into the 'docs' directory
+      - name: Add CNAME file
+        run: |
+          echo "losersonly.org" > ./docs/CNAME
+
+      # Optionally, commit the changes if needed
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Updated docs directory and added CNAME [skip ci]"
+
+      # Push the changes back to the repository
+      - name: Push changes
+        run: |
+          git push origin main
