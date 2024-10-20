@@ -18,4 +18,7 @@
 - http://localhost:3000
 
 # Deployment
-- run `npm export` when in the app to build the app. This will be built out in the 'out' file. You need to transfer that file into the root directory's 'docs' directory. This is where the built site will be referenced via GH.
+- run `npm run export` when in the app to build the app. This will be built out in the 'out' file. 
+- Check out the `docs` directory in the root - ensure you keep the CNAME file
+- Transfer the `out` file and replace the root `docs`
+- You need to transfer that file into the root directory's 'docs' directory. This is where the built site will be referenced via GH.
