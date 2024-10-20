@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # Allow the workflow to push changes to the repository
+
+
 jobs:
   build_and_export:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
