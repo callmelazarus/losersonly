@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  purge: ['./pages/**/*.js', 
+    './components/**/*.js',
+    './app/**/*.{js,ts,jsx,tsx}',  // Covers all files in the app directory
+
+  ], // Adjust based on your file structure
   theme: {
     extend: {
       colors: {
