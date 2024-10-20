@@ -24,6 +24,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
+        working-directory: ./losers_only  # Set the working directory
         run: npm install
 
       # Build the Next.js application
