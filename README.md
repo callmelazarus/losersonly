@@ -2,12 +2,12 @@
 
 
 # Bugs
-- CSS not incorporated in build as of 10/24
+- CSS not incorporated in build as of 10/24 - finding that in the build, the css file lives, but I get a 404 when I inspect the page...
 
 # Achievements
-- Learned about website hosting
-- Learned about Github actions in order to automate building
-- Created a simple NextJS app
+- Learned about website hosting and domain names.
+- Used Github actions in order to automate building of application! Check out the `move_and_rename.yml` file!
+- Used font animations via tailwind config file.
 
 # Lessons
 - Setting up the app and connecting the squarespace and github pages took about 30 minutes
@@ -21,7 +21,7 @@
 - npm run dev
 - http://localhost:3000
 
-# Deployment
+# Deployment - these steps are now automated with GH actions!
 - run `npm run export` when in the app to build the app. This will be built out in the 'out' file. 
 - Check out the `docs` directory in the root - ensure you keep the CNAME file
 - Transfer the `out` file and replace the root `docs`
