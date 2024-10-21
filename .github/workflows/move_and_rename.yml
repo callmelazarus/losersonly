@@ -50,7 +50,7 @@ jobs:
           # Modify the out/index.html file to change the href from "/losersonly/_next/static/css" to "_next/static/css"
       - name: Update index.html paths
         run: |
-          sed -i 's|/losersonly/_next/static/css|_next/static/css|g' out/index.html
+          sed -i 's|/losersonly/_next/static/css|_next/static/css|g' docs/index.html
 
 
       # Optionally, commit the changes if needed
