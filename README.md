@@ -21,6 +21,9 @@
 - npm run dev
 - http://localhost:3000
 
+- To 'serve' what is in the 'docs' directory - to simulate what the build looks like in the deployed site:
+- `npx serve docs/`
+
 # Deployment - these steps are now automated with GH actions!
 - run `npm run export` when in the app to build the app. This will be built out in the 'out' file. 
 - Check out the `docs` directory in the root - ensure you keep the CNAME file
