@@ -5,7 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,     // Disables image optimization (useful for static sites)
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/losersonly/' : '',
 };
 
 export default nextConfig;

@@ -3,7 +3,7 @@
 
 # Bugs
 - CSS not incorporated in build as of 10/24 - finding that in the build, the css file lives, but I get a 404 when I inspect the page...
-  - SOLN: I think it has to do with the fact that the build is made within the nexted losers_only directory, but for it to be deployed on GH, that out directory moves to the root. This means, the reference is now wrong. The changes need to be incoroprated in the .yml file as well
+  - not a SOLN: I think it has to do with the fact that the build is made within the nexted losers_only directory, but for it to be deployed on GH, that out directory moves to the root. This means, the reference is now wrong. The changes need to be incoroprated in the .yml file as well. NOPE. this didn't fix things...
 
 # Achievements
 - Learned about website hosting and domain names.
