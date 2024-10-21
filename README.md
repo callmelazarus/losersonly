@@ -3,6 +3,7 @@
 
 # Bugs
 - CSS not incorporated in build as of 10/24 - finding that in the build, the css file lives, but I get a 404 when I inspect the page...
+  - SOLN: I think it has to do with the fact that the build is made within the nexted losers_only directory, but for it to be deployed on GH, that out directory moves to the root. This means, the reference is now wrong. The changes need to be incoroprated in the .yml file as well
 
 # Achievements
 - Learned about website hosting and domain names.
@@ -13,6 +14,7 @@
 - Setting up the app and connecting the squarespace and github pages took about 30 minutes
 - Going thru the configs is a bit stressful as I'm not sure if it will all work, until I test things
 - A failed GitHub Actions workflow does not prevent the commit from being applied to your repository.
+- sed is a powerful tool for making inline replacements in files, making it perfect for modifying the href in your HTML files within a GitHub Actions workflow.
 
 # Running locally
 - The actual Next app lives in 'losers_only' directory, so you need to cd into that directory to work within the app
