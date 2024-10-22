@@ -4,11 +4,14 @@
 # Bugs
 - CSS not incorporated in build as of 10/24 - finding that in the build, the css file lives, but I get a 404 when I inspect the page...
   - not a SOLN: I think it has to do with the fact that the build is made within the nexted losers_only directory, but for it to be deployed on GH, that out directory moves to the root. This means, the reference is now wrong. The changes need to be incoroprated in the .yml file as well. NOPE. this didn't fix things...
+  - SOLN!!!! It was including a docs/.nojekyll file...
+    - GitHub Pages uses Jekyll, a static site generator. Jekyll automatically ignores directories that start with an underscore (_), like _next/, which is a directory used by Next.js to store static assets
 
 # Achievements
 - Learned about website hosting and domain names.
 - Used Github actions in order to automate building of application! Check out the `move_and_rename.yml` file!
 - Used font animations via tailwind config file.
+- Solved an issue with deployment, utilizing a .nojekyll file
 
 # Lessons
 - Setting up the app and connecting the squarespace and github pages took about 30 minutes

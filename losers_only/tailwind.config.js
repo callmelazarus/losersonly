@@ -18,11 +18,11 @@ module.exports = {
       },
       keyframes: {
         fontAnimation: {
-          '0%': { fontSize: '1.5rem', color: '#f1c40f', fontWeight: 'normal', fontStyle: 'normal' },
-          '25%': { fontSize: '2rem', color: '#16a085', fontWeight: 'lighter', fontStyle: 'italic' },
+          '0%': { fontSize: '1.5rem', color: '#FAF9F6', fontWeight: 'normal', fontStyle: 'normal' },
+          '25%': { fontSize: '2rem', color: '#FAF9F6', fontWeight: 'lighter', fontStyle: 'italic' },
           '50%': { fontSize: '2.5rem', color: '#ffffff', fontWeight: 'bold', fontStyle: 'normal' },
-          '75%': { fontSize: '2rem', color: '#f39c12', fontWeight: 'lighter', fontStyle: 'italic' },
-          '100%': { fontSize: '1.5rem', color: '#8e44ad', fontWeight: 'normal', fontStyle: 'normal' },
+          '75%': { fontSize: '2rem', color: '#FAF9F6', fontWeight: 'lighter', fontStyle: 'italic' },
+          '100%': { fontSize: '1.5rem', color: '#FAF9F6', fontWeight: 'normal', fontStyle: 'normal' },
         },
       },
       animation: {
