@@ -52,6 +52,11 @@ jobs:
         run: |
           sed -i 's|/_next/|./_next/|g' docs/index.html
 
+      # Step to create .nojekyll file in the docs/ folder
+      - name: Create .nojekyll file
+        run: |
+          touch docs/.nojekyll
+
 
       # Optionally, commit the changes if needed
       - name: Commit changes
